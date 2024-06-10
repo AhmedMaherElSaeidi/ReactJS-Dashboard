@@ -1,0 +1,30 @@
+.workout-detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.workout-detail > .exercise-detail .exercise-detail-div,
+.workout-detail > .exercise-detail p {
+  font-size: 1.15rem;
+  margin-bottom: 0.25rem;
+}
+.workout-detail > .exercise-detail .exercise-detail-inf {
+  padding-left: 1rem;
+}
+.workout-detail > .exercise-detail .text-darkblue {
+  color: #010057;
+}
+.workout-detail > .exercise-detail h2,
+.workout-detail > .exercise-detail h3 {
+  text-transform: capitalize;
+  font-weight: bold;
+}
+.workout-detail > .exercise-detail > .exercise-instructions > ol {
+  font-size: 1.15rem;
+}
+.workout-detail > .return-btn {
+  width: 8rem;
+  padding: 0.5rem;
+  margin-top: 1rem;
+}

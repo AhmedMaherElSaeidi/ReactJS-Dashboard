@@ -1,0 +1,16 @@
+.layout > .layout-outlet {
+  padding: 1rem;
+  float: right;
+  width: 95%;
+}
+@media screen and (max-width:920px) {
+  .layout > .layout-outlet {
+    padding-top: 10rem !important;    
+    width: 100%;
+  }
+}@media screen and (max-width:520px) {
+  .layout > .layout-outlet {
+    padding-top: 6rem !important;    
+    width: 100%;
+  }
+}

@@ -1,0 +1,148 @@
+nav {
+  position: fixed;
+  float: left;
+  width: 0;
+  height: 0;
+  z-index: 1;
+}
+nav .nav-data {
+  position: absolute;
+  width: 240px;
+  margin: -100px 0 0 -50px;
+  padding: 125px 0px 40px;
+  background: #010057;
+  list-style-type: none;
+  min-height: 110vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+nav .nav-data li:first-child img {
+  width: 5rem;
+}
+nav .nav-data li:not(:first-child):not(:last-child) {
+  width: 100%;
+  color: white;
+  font-weight: bold;
+  font-size: 1.25rem;
+  text-align: center;
+  padding: 0.5rem 0.75rem;
+}
+nav .active,
+nav .nav-data li:hover:not(:first-child):not(:last-child) {
+  border-left: 3px solid #6f8faf;
+  background-color: white !important;
+  color: #010057 !important;
+}
+nav .nav-data li:last-child {
+  color: white;
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+nav .nav-data li a {
+  padding: 0;
+} /* padding: 25px 50px */
+nav .nav-data .separator {
+  padding: 0;
+  border-bottom: 3px solid #e6e7ea;
+  cursor: default;
+  margin: 6px 0;
+}
+nav #clickNav {
+  display: block;
+  position: relative;
+  top: 50px;
+  left: 50px;
+  z-index: 1;
+}
+nav #clickNav input {
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 9999;
+  -webkit-touch-callout: none;
+}
+nav #clickNav input:checked ~ ul {
+  -webkit-transform: none;
+  transform: none;
+}
+
+nav #clickNav span {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  background: #010057;
+  border-radius: 3px;
+  z-index: 1;
+}
+nav #clickNav span {
+  -webkit-transform-origin: 4px 0px;
+  transform-origin: 4px 0px;
+  transition: background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+    opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+    background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+    background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease,
+    -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+}
+
+nav #clickNav span:first-child {
+  -webkit-transform-origin: 0% 0%;
+  transform-origin: 0% 0%;
+}
+nav #clickNav span:nth-last-child(2) {
+  -webkit-transform-origin: 0% 100%;
+  transform-origin: 0% 100%;
+}
+
+nav #clickNav input:checked ~ span {
+  opacity: 1;
+  -webkit-transform: rotate(45deg) translate(-2px, -1px);
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: white;
+}
+
+nav #clickNav input:checked ~ span:nth-last-child(3) {
+  opacity: 0;
+  -webkit-transform: rotate(0deg) scale(0.2, 0.2);
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+nav #clickNav input:checked ~ span:nth-last-child(2) {
+  -webkit-transform: rotate(-45deg) translate(0, -1px);
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+nav .nav-data {
+  -webkit-transform-origin: 0% 0%;
+  transform-origin: 0% 0%;
+  -webkit-transform: translate(-100%, 0);
+  transform: translate(-100%, 0);
+  transition: -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+    -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+}
+
+@media screen and (max-width: 920px) {
+  nav .nav-data {
+    width: 200px;
+    min-height: 180vh;
+  }
+  nav .nav-data li:not(:last-child) {
+    padding: 0.45rem 0.65rem;
+    font-size: 1rem;
+  }
+  nav .nav-data li:last-child {
+    padding: 0.4rem;
+    font-size: 0.85rem;
+  }
+}
